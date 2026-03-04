@@ -491,7 +491,12 @@ function StatCard({ label, value, suffix = "", prefix = "", color = COLORS.accen
   );
 }
 
-function Badge({ children, color = COLORS.green }) {
+type BadgeProps = {
+children: React.ReactNode;
+color?: string;
+};
+
+function Badge({ children, color = COLORS.DEFAULT }: BadgeProps) {
   return (
     <span
       style={{
