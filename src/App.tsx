@@ -480,7 +480,7 @@ function StatCard({ label, value, suffix = "", prefix = "", color = COLORS.accen
           letterSpacing: -1,
         }}
       >
-        <AnimatedNumber value={value} suffix={suffix} prefix={prefix} />
+        <AnimatedNumber value={Number(value) || 0} suffix={suffix} prefix={prefix} />
       </div>
       {sub && (
         <div style={{ fontSize: 12, color: COLORS.muted, marginTop: 6 }}>
