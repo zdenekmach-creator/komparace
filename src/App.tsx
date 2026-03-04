@@ -393,7 +393,14 @@ const tabs = [
   { id: "navrhy", label: "Návrhy", icon: "▸" },
 ];
 
-function AnimatedNumber({ value, suffix = "", prefix = "", duration = 1200 }) {
+type AnimatedNumberProps = {
+value: number;
+suffix?: string;
+prefix?: string;
+duration?: number;
+};
+
+function AnimatedNumber({ value, suffix = "", prefix = "", duration = 1200 }: AnimatedNumberProps) {
   const [display, setDisplay] = useState(0);
   useEffect(() => {
     let start = 0;
