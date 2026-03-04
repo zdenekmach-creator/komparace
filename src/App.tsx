@@ -427,14 +427,15 @@ function AnimatedNumber({ value, suffix = "", prefix = "", duration = 1200 }: An
   );
 }
 
-function StatCard({
-  label,
-  value,
-  suffix = "",
-  prefix = "",
-  color = COLORS.accent1,
-  sub = null,
-}) {
+type StatCardProps = {
+label: string;
+value: number | string;
+suffix?: string;
+prefix?: string;
+color?: string;
+sub?: string | null;
+};
+function StatCard({ label, value, suffix = "", prefix = "", color = COLORS.accent1, sub = null }: StatCardProps) {
   return (
     <div
       style={{
