@@ -381,8 +381,8 @@ const swotCUMIPMT = {
   ],
 };
 
-const fmt = (n) => new Intl.NumberFormat("cs-CZ").format(n);
-const fmtM = (n) => `${(n / 1000).toFixed(0)} tis.`;
+const fmt = (n: number) => new Intl.NumberFormat("cs-CZ").format(n);
+const fmtM = (n: number) => `${(n / 1000).toFixed(0)} tis.`;
 
 const tabs = [
   { id: "prehled", label: "Přehled", icon: "◉" },
