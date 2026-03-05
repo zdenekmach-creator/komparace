@@ -515,7 +515,11 @@ function Badge({ children, color = COLORS.green }: BadgeProps) {
   );
 }
 
-function WinCell({ status }) {
+type WinCellProps = {
+status: string;
+};
+
+function WinCell({ status }: WinCellProps) {
   const bg =
     status === "win"
       ? COLORS.greenBg
