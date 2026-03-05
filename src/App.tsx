@@ -553,7 +553,13 @@ function WinCell({ status }: WinCellProps) {
   );
 }
 
-function SWOTGrid({ data, title, color }) {
+ype SWOTGridProps = {
+data: any;
+title?: string;
+color?: string;
+};
+
+function SWOTGrid({ data, title, color }: SWOTGridProps) {
   const quadrants = [
     { key: "strengths", label: "SILNÉ STRÁNKY", icon: "▲", c: COLORS.green },
     { key: "weaknesses", label: "SLABÉ STRÁNKY", icon: "▼", c: COLORS.red },
