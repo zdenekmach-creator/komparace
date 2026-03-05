@@ -553,7 +553,7 @@ function WinCell({ status }: WinCellProps) {
   );
 }
 
-ype SWOTGridProps = {
+type SWOTGridProps = {
 data: any;
 title?: string;
 color?: string;
