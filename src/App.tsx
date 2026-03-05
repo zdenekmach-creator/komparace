@@ -616,7 +616,7 @@ function SWOTGrid({ data, title, color }: SWOTGridProps) {
             >
               <span>{q.icon}</span> {q.label}
             </div>
-            {data[q.key].map((item, i) => (
+            {data[q.key].map((item: any, i: number) => (
               <div
                 key={i}
                 style={{
