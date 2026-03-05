@@ -496,7 +496,7 @@ children: React.ReactNode;
 color?: string;
 };
 
-function Badge({ children, color = COLORS.DEFAULT }: BadgeProps) {
+function Badge({ children, color = COLORS.green }: BadgeProps) {
   return (
     <span
       style={{
