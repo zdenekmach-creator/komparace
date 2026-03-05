@@ -1547,6 +1547,7 @@ export default function Dashboard() {
               <ResponsiveContainer width="100%" height={350}>
                 <RadarChart data={radarData}>
                   <PolarGrid stroke={COLORS.border} />
+                  {/* @ts-ignore */}
                   <PolarAngleAxis
                     dataKey="dim"
                     tick={{ fill: COLORS.muted, fontSize: 11 }}
@@ -1872,6 +1873,7 @@ export default function Dashboard() {
               <ResponsiveContainer width="100%" height={300}>
                 <RadarChart data={radarData}>
                   <PolarGrid stroke={COLORS.border} />
+                  {/* @ts-ignore */}
                   <PolarAngleAxis
                     dataKey="dim"
                     tick={{ fill: COLORS.muted, fontSize: 11 }}
