@@ -638,17 +638,19 @@ function SWOTGrid({ data, title, color }: SWOTGridProps) {
   );
 }
 
-function ProposalCard({
-  num,
-  title,
-  badge,
-  badgeColor,
-  amount,
-  forWhom,
-  why,
-  criticism,
-  color,
-}) {
+type ProposalCardProps = {
+num: string | number;
+title: string;
+badge?: string;
+badgeColor?: string;
+amount: string;
+forWhom: string;
+why: string;
+criticism: string;
+color: string;
+};
+
+function ProposalCard({ num, title, badge, badgeColor, amount, forWhom, why, criticism, color }: ProposalCardProps) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -745,7 +747,13 @@ function ProposalCard({
   );
 }
 
-const CustomTooltip = ({ active, payload, label }) => {
+type CustomTooltipProps = {
+active?: boolean;
+payload?: any[];
+label?: string | number;
+};
+
+const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   if (!active || !payload?.length) return null;
   return (
     <div
